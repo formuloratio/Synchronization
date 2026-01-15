@@ -22,6 +22,8 @@ public class AuthManager : MonoBehaviour
     public static event Action OnSignUpSuccess;
     public static event Action OnLoginSuccess;
 
+    [SerializeField] private GameData playerData;
+
     private async void Awake()
     {
         UnityServices.Initialized += () =>
@@ -67,6 +69,8 @@ public class AuthManager : MonoBehaviour
                 await AuthenticationService.Instance.SignInWithUsernamePasswordAsync(userName, password);
                 OnLoginSuccess?.Invoke();
                 Debug.Log("로그인 성공");
+
+                playerData.PlayerName = userName; // 이름 저장
             }
             catch (AuthenticationException e)
             {

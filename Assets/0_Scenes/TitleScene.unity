@@ -2409,6 +2409,7 @@ MonoBehaviour:
   passwordIF_SignUp: {fileID: 151051797}
   useNameIF_Login: {fileID: 352322507}
   passwordIF_Login: {fileID: 506773491}
+  playerData: {fileID: 11400000, guid: db637fffbe43d09499262b8cf94fbc0f, type: 2}
 --- !u!1 &960167308
 GameObject:
   m_ObjectHideFlags: 0
